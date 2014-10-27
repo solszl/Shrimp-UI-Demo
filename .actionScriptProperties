@@ -30,6 +30,7 @@
       </libraryPathEntry>
       <libraryPathEntry kind="3" linkType="1" path="/ShrimpUI/bin/ShrimpUI.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="3" linkType="1" path="/Shrimp-Scrollable-Box/bin/Shrimp-Scrollable-Box.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/Shrimp-Extentions-UI/bin/Shrimp-Extentions-UI.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>
