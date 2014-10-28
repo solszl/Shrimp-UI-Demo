@@ -54,7 +54,7 @@ package com.shrimp.demo.panel
 			lbl2.text = "2:右对齐";
 			
 			lbl3 = new Label(vb);
-			lbl3.width = 30;
+			lbl3.width = 80;
 			lbl3.text = "3:宽度不够的时候, 查看显示效果";
 			
 			lbl4 = new Label(vb);
@@ -99,6 +99,10 @@ package com.shrimp.demo.panel
 		override public function hide():void
 		{
 			super.hide();
+			if(!sp)
+			{
+				return;
+			}
 			sp.removeEventListener(Event.ENTER_FRAME,onShapeEnterFrame);
 		}
 		

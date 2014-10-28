@@ -6,6 +6,7 @@ package com.shrimp.demo.view
 	import com.shrimp.demo.panel.PImage;
 	import com.shrimp.demo.panel.PLabel;
 	import com.shrimp.demo.panel.PText;
+	import com.shrimp.demo.panel.PViewStack;
 	import com.shrimp.extensions.clip.core.AbsClip;
 	import com.shrimp.framework.interfaces.IPanel;
 	import com.shrimp.framework.managers.PanelManager;
@@ -96,11 +97,13 @@ package com.shrimp.demo.view
 			}
 			
 			
+			PanelManager.registPanel(PanelType.PANEL_LABEL_DEMO,PLabel);
 			PanelManager.registPanel(PanelType.PANEL_BUTTON_DEMO,PButton);
 			PanelManager.registPanel(PanelType.PANEL_CHECKBOX_DEMO,PCheckBox);
 			PanelManager.registPanel(PanelType.PANEL_IMAGE_DEMO,PImage);
-			PanelManager.registPanel(PanelType.PANEL_LABEL_DEMO,PLabel);
 			PanelManager.registPanel(PanelType.PANEL_TEXT_DEMO,PText);
+			
+			PanelManager.registPanel(PanelType.PANEL_VIEWSTACK_DEMO,PViewStack);
 			
 		}
 		
@@ -123,6 +126,9 @@ package com.shrimp.demo.view
 					break;
 				case btnText:
 					panelId = PanelType.PANEL_TEXT_DEMO;
+					break;
+				case btnViewStack:
+					panelId = PanelType.PANEL_VIEWSTACK_DEMO;
 					break;
 			}
 			PanelManager.getInstance().showPanel(panelId,false);
