@@ -3,6 +3,7 @@ package com.shrimp.demo.view
 	import com.shrimp.demo.constant.PanelType;
 	import com.shrimp.demo.panel.PButton;
 	import com.shrimp.demo.panel.PCheckBox;
+	import com.shrimp.demo.panel.PDataBox;
 	import com.shrimp.demo.panel.PImage;
 	import com.shrimp.demo.panel.PLabel;
 	import com.shrimp.demo.panel.PText;
@@ -37,6 +38,8 @@ package com.shrimp.demo.view
 		private var btnImage:Button;
 		/**	导航*/
 		private var btnViewStack:Button;
+		/**	数据*/
+		private var btnDataBox:Button;
 		override protected function createChildren():void
 		{
 			super.createChildren();
@@ -81,6 +84,11 @@ package com.shrimp.demo.view
 			btnViewStack.scale9Rect =new Rectangle(4,4,12,12); 
 			btnViewStack.label = "ViewStack";
 			
+			btnDataBox = new Button(hbox2);
+			btnDataBox.scale9Rect = new Rectangle(4,4,12,12);
+			btnDataBox.label = "DataBox";
+			
+			
 			var btn:Button;
 			for (var i:int = 0; i < hbox.numChildren; i++) 
 			{
@@ -104,6 +112,7 @@ package com.shrimp.demo.view
 			PanelManager.registPanel(PanelType.PANEL_TEXT_DEMO,PText);
 			
 			PanelManager.registPanel(PanelType.PANEL_VIEWSTACK_DEMO,PViewStack);
+			PanelManager.registPanel(PanelType.PANEL_DATABOX_DEMO,PDataBox);
 			
 		}
 		
@@ -129,6 +138,9 @@ package com.shrimp.demo.view
 					break;
 				case btnViewStack:
 					panelId = PanelType.PANEL_VIEWSTACK_DEMO;
+					break;
+				case btnDataBox:
+					panelId = PanelType.PANEL_DATABOX_DEMO;
 					break;
 			}
 			PanelManager.getInstance().showPanel(panelId,false);

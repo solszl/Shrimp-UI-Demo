@@ -18,6 +18,8 @@ package com.shrimp.demo.constant
 		
 		public static var PANEL_VIEWSTACK_DEMO:int = ++BASE;
 		
+		public static var PANEL_DATABOX_DEMO:int = ++BASE;
+		
 		public function PanelType()
 		{
 		}
