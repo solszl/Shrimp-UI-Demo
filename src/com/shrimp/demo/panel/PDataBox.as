@@ -39,15 +39,25 @@ package com.shrimp.demo.panel
 			
 			var arr:Array = [];
 			var obj:Object;
-			for (var i:int = 0; i < 1 ; i++)// Math.ceil(Math.random()*10) 
+			for (var i:int = 0; i < 20 ; i++)// Math.ceil(Math.random()*10)
 			{
 				obj = {};
 				obj.name = "Hello"+i;
 				obj.age = i;
 				arr.push(obj);
 			}
-			
+//			db.dataProvider=null;
 			db.dataProvider = new ArrayList(arr);
+			
+			
+//			var lbl:LabelItemRender;
+//			
+//			for (var j:int = 0; j < arr.length; j++) 
+//			{
+//				lbl = new LabelItemRender(this,0,j*20);
+//				lbl.data = arr[j];
+//			}
+			
 		}
 	}
 }
