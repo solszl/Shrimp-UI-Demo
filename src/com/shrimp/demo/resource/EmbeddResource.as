@@ -10,5 +10,9 @@ package com.shrimp.demo.resource
 		
 		[Embed(source="/../arts/embeddAssets/dialog_bg.png")]
 		public static const DIALOG_BORDER:Class;
+		
+		[Embed(source="/../arts/boneAssets/bone.png", mimeType="application/octet-stream")]
+		public static const Bones_Data:Class;
+		
 	}
 }

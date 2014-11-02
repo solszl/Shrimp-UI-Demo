@@ -38,7 +38,7 @@ package com.shrimp.demo.panel.itemrenders
 			obj = value as Object;
 			
 			lblName.text = obj.name;
-			lblName.fontSize = 40;
+			lblName.fontSize = 20;
 			lblAge.text = obj.age+'';
 			imgIcon.source = "http://i.maxthonimg.com/v5/common/search-1/baidu.gif";
 			

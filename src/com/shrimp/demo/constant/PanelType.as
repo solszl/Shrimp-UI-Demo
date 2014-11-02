@@ -19,6 +19,8 @@ package com.shrimp.demo.constant
 		public static var PANEL_VIEWSTACK_DEMO:int = ++BASE;
 		
 		public static var PANEL_DATABOX_DEMO:int = ++BASE;
+		/**	骨头*/
+		public static var PANEL_BONE_DEMO:int = ++BASE;
 		
 		public function PanelType()
 		{
