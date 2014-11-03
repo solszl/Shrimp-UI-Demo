@@ -97,5 +97,11 @@ package com.shrimp.demo.panel
 					break;
 			}
 		}
+		
+		override public function hide():void
+		{
+			super.hide();
+			engine.stop();
+		}
 	}
 }

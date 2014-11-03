@@ -20,10 +20,19 @@ package com.shrimp.demo.panel.pakour
 			lblState.text = "default";
 		}
 		
+		private var delta:Number=0;
 		override public function update(t:Number):void
 		{
 			super.update(t);
-			lblState.text = t+"";
+			if(delta<0.35)
+			{
+				delta+=t;
+			}
+			else
+			{
+				lblState.text = delta+"";
+				delta = 0;
+			}
 		}
 	}
 }
