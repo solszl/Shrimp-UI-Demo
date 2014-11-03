@@ -22,6 +22,9 @@ package com.shrimp.demo.constant
 		/**	骨头*/
 		public static var PANEL_BONE_DEMO:int = ++BASE;
 		
+		/**	跑酷引擎*/
+		public static var PANEL_PAKOUR_DEMO:int = ++BASE;
+		
 		public function PanelType()
 		{
 		}

@@ -7,18 +7,13 @@ package com.shrimp.demo.view
 	import com.shrimp.demo.panel.PDataBox;
 	import com.shrimp.demo.panel.PImage;
 	import com.shrimp.demo.panel.PLabel;
+	import com.shrimp.demo.panel.PPakour;
 	import com.shrimp.demo.panel.PText;
 	import com.shrimp.demo.panel.PViewStack;
-	import com.shrimp.extensions.clip.core.AbsClip;
-	import com.shrimp.framework.interfaces.IPanel;
 	import com.shrimp.framework.managers.PanelManager;
-	import com.shrimp.framework.ui.container.HBox;
 	import com.shrimp.framework.ui.container.VBox;
 	import com.shrimp.framework.ui.controls.BaseView;
 	import com.shrimp.framework.ui.controls.Button;
-	import com.shrimp.framework.ui.controls.TabBar;
-	import com.shrimp.framework.ui.layout.VerticalLayout;
-	import com.shrimp.framework.utils.ArrayList;
 	
 	import flash.display.DisplayObjectContainer;
 	import flash.events.MouseEvent;
@@ -43,6 +38,9 @@ package com.shrimp.demo.view
 		private var btnDataBox:Button;
 		/**	骨头*/
 		private var btnBone:Button;
+		
+		/**	跑酷引擎*/
+		private var btnPakour:Button;
 		override protected function createChildren():void
 		{
 			super.createChildren();
@@ -55,15 +53,18 @@ package com.shrimp.demo.view
 			
 			hbox = new VBox(this);
 			hbox2= new VBox(this,90);
+			hbox3 = new VBox(this,180);
 			initHUE();
 		}
 		
 		private var hbox:VBox;
 		private var hbox2:VBox;
+		private var hbox3:VBox;
 		private function initHUE():void
 		{
 			hbox.addEventListener(MouseEvent.CLICK,onBoxClickHandler);
 			hbox2.addEventListener(MouseEvent.CLICK,onBoxClickHandler);
+			hbox3.addEventListener(MouseEvent.CLICK,onBoxClickHandler);
 			
 			btnLabel = new Button(hbox);
 			btnLabel.label = "Label";
@@ -84,16 +85,16 @@ package com.shrimp.demo.view
 			btnImage.label= "Image";
 			
 			btnViewStack = new Button(hbox2);
-			btnViewStack.scale9Rect =new Rectangle(4,4,12,12); 
 			btnViewStack.label = "ViewStack";
 			
 			btnDataBox = new Button(hbox2);
-			btnDataBox.scale9Rect = new Rectangle(4,4,12,12);
 			btnDataBox.label = "DataBox";
 			
 			btnBone = new Button(hbox2);
-			btnBone.scale9Rect = new Rectangle(4,4,12,12);
 			btnBone.label = "Bone";
+			
+			btnPakour = new Button(hbox3);
+			btnPakour.label = "Pakour";
 			
 			
 			var btn:Button;
@@ -111,6 +112,14 @@ package com.shrimp.demo.view
 				btn.width = 80;
 			}
 			
+			for (var k:int = 0; k < hbox3.numChildren; k++) 
+			{
+				btn = hbox3.getChildAt(k) as Button;
+				btn.scale9Rect = new Rectangle(4,4,12,12);
+				btn.width = 90;
+			}
+			
+			
 			
 			PanelManager.registPanel(PanelType.PANEL_LABEL_DEMO,PLabel);
 			PanelManager.registPanel(PanelType.PANEL_BUTTON_DEMO,PButton);
@@ -121,6 +130,8 @@ package com.shrimp.demo.view
 			PanelManager.registPanel(PanelType.PANEL_VIEWSTACK_DEMO,PViewStack);
 			PanelManager.registPanel(PanelType.PANEL_DATABOX_DEMO,PDataBox);
 			PanelManager.registPanel(PanelType.PANEL_BONE_DEMO,PBone);
+			
+			PanelManager.registPanel(PanelType.PANEL_PAKOUR_DEMO,PPakour);
 			
 		}
 		
@@ -153,6 +164,9 @@ package com.shrimp.demo.view
 				case btnBone:
 					panelId = PanelType.PANEL_BONE_DEMO;
 					break
+				case btnPakour:
+					panelId = PanelType.PANEL_PAKOUR_DEMO;
+					break;
 			}
 			PanelManager.getInstance().showPanel(panelId,false);
 			

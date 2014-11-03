@@ -1,23 +1,14 @@
 package
 {
 	import com.shrimp.demo.constant.ViewType;
-	import com.shrimp.demo.panel.BasePanel;
 	import com.shrimp.demo.view.WelcomeView;
-	import com.shrimp.extensions.clip.core.LazyDispatcher;
 	import com.shrimp.framework.core.ApplicationBase;
 	import com.shrimp.framework.managers.LayerManager;
-	import com.shrimp.framework.managers.PanelManager;
 	import com.shrimp.framework.managers.StageManager;
 	import com.shrimp.framework.managers.ViewManager;
-	import com.shrimp.framework.ui.container.Box;
-	import com.shrimp.framework.ui.container.HBox;
-	import com.shrimp.framework.ui.controls.Button;
-	import com.shrimp.framework.ui.controls.Label;
 	import com.shrimp.framework.utils.SWFProfiler;
 	
-	import flash.display.Sprite;
 	import flash.events.Event;
-	import flash.geom.Rectangle;
 	
 	[SWF(width="800",height="600",frameRate="60")]
 	public class Main extends ApplicationBase
