@@ -14,5 +14,7 @@ package com.shrimp.demo.resource
 		[Embed(source="/../arts/boneAssets/bone.png", mimeType="application/octet-stream")]
 		public static const Bones_Data:Class;
 		
+		[Embed(source="/../arts/camera/bg001.jpg")]
+		public static const Camera_BG:Class;
 	}
 }

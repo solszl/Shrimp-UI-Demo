@@ -24,6 +24,8 @@ package com.shrimp.demo.constant
 		
 		/**	跑酷引擎*/
 		public static var PANEL_PAKOUR_DEMO:int = ++BASE;
+		/**	Camera*/
+		public static var PANEL_CAMERA_DEMO:int = ++BASE;
 		
 		public function PanelType()
 		{

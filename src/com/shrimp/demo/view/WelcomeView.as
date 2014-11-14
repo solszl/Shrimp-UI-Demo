@@ -3,6 +3,7 @@ package com.shrimp.demo.view
 	import com.shrimp.demo.constant.PanelType;
 	import com.shrimp.demo.panel.PBone;
 	import com.shrimp.demo.panel.PButton;
+	import com.shrimp.demo.panel.PCamera;
 	import com.shrimp.demo.panel.PCheckBox;
 	import com.shrimp.demo.panel.PDataBox;
 	import com.shrimp.demo.panel.PImage;
@@ -41,6 +42,10 @@ package com.shrimp.demo.view
 		
 		/**	跑酷引擎*/
 		private var btnPakour:Button;
+		
+		/**	Camera*/
+		private var btnCamera:Button;
+		
 		override protected function createChildren():void
 		{
 			super.createChildren();
@@ -96,6 +101,10 @@ package com.shrimp.demo.view
 			btnPakour = new Button(hbox3);
 			btnPakour.label = "Pakour";
 			
+			btnCamera = new Button(hbox3);
+			btnCamera.label = "Camera";
+			btnCamera.enabled=false;
+			
 			
 			var btn:Button;
 			for (var i:int = 0; i < hbox.numChildren; i++) 
@@ -132,6 +141,7 @@ package com.shrimp.demo.view
 			PanelManager.registPanel(PanelType.PANEL_BONE_DEMO,PBone);
 			
 			PanelManager.registPanel(PanelType.PANEL_PAKOUR_DEMO,PPakour);
+			PanelManager.registPanel(PanelType.PANEL_CAMERA_DEMO,PCamera);
 			
 		}
 		
@@ -166,6 +176,9 @@ package com.shrimp.demo.view
 					break
 				case btnPakour:
 					panelId = PanelType.PANEL_PAKOUR_DEMO;
+					break;
+				case btnCamera:
+					panelId = PanelType.PANEL_CAMERA_DEMO;
 					break;
 			}
 			PanelManager.getInstance().showPanel(panelId,false);
